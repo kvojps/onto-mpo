@@ -1,0 +1,25 @@
+@startuml DataHandler
+skinparam groupInheritance 2
+hide <<kind>> circle
+hide <<phase>> circle
+hide <<role>> circle
+hide members
+hide methods
+
+class ProjectObservatory<<kind>> #FF7F7F {}
+class ProcessManager <<role>> #FFD6DD {}
+class DataHandler <<role>> #FFD6DD {}
+class Extractor <<phase>> {}
+class Transformer <<phase>> {}
+class Loader <<phase>> {}
+class KnowledgeProducer <<role>> #FFD6DD {}
+
+ProjectObservatory <|-- ProcessManager
+ProcessManager <|-- DataHandler
+ProcessManager <|-- KnowledgeProducer
+
+DataHandler <|-- Extractor
+DataHandler <|-- Transformer
+DataHandler <|-- Loader
+
+@enduml
