@@ -3,6 +3,7 @@ skinparam groupInheritance 2
 hide <<kind>> circle
 hide <<phase>> circle
 hide <<role>> circle
+hide <<collective>> circle
 hide members
 hide methods
 
@@ -26,12 +27,25 @@ DataHandler <|-- Loader
 class Data <<kind>> #FF7F7F {}
 class RawData <<phase>> {}
 class ProcessedData <<phase>> {}
+class DataSource <<collective>> {}
+class DataStore <<collective>> {}
 
 RawData --|> Data
 ProcessedData --|> Data
-Extractor "1" -- "1..*" RawData : extracts >
-Transformer "1" -- "1..*" RawData : transforms >
-Transformer "1" -- "1..*" ProcessedData : produces >
-Loader "1" -- "1..*" ProcessedData : loads >
+DataSource --|> RawData
+DataStore --|> ProcessedData
+
+class DataArtifact<<phase>> {}
+class BufferedDataArtifact<<phase>> {}
+class ProcessedDataArtifact<<phase>> {}
+
+DataArtifact -- DataSource
+BufferedDataArtifact-- DataSource
+ProcessedDataArtifact -- DataSource
+
+Extractor "1" -- "1..*" DataArtifact : extracts >
+Transformer "1" -- "1..*" BufferedDataArtifact : transforms >
+Loader "1" -- "1..*" ProcessedDataArtifact : loads >
+ProcessedDataArtifact "1..*" -- "1" DataStore : stored in >
 
 @enduml
