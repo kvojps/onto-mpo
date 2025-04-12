@@ -9,17 +9,29 @@ hide methods
 class ProjectObservatory<<kind>> #FF7F7F {}
 class ProcessManager <<role>> #FFD6DD {}
 class DataHandler <<role>> #FFD6DD {}
-class Extractor <<phase>> {}
-class Transformer <<phase>> {}
-class Loader <<phase>> {}
 class KnowledgeProducer <<role>> #FFD6DD {}
 
 ProjectObservatory <|-- ProcessManager
 ProcessManager <|-- DataHandler
 ProcessManager <|-- KnowledgeProducer
 
+class Extractor <<phase>> {}
+class Transformer <<phase>> {}
+class Loader <<phase>> {}
+
 DataHandler <|-- Extractor
 DataHandler <|-- Transformer
 DataHandler <|-- Loader
+
+class Data <<kind>> #FF7F7F {}
+class RawData <<phase>> {}
+class ProcessedData <<phase>> {}
+
+RawData --|> Data
+ProcessedData --|> Data
+Extractor "1" -- "1..*" RawData : extracts
+Transformer "1" -- "1..*" RawData : transforms
+Transformer "1" -- "1..*" ProcessedData : produces
+Loader "1" -- "1..*" ProcessedData : loads
 
 @enduml
