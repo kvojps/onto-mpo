@@ -29,9 +29,9 @@ class ProcessedData <<phase>> {}
 
 RawData --|> Data
 ProcessedData --|> Data
-Extractor "1" -- "1..*" RawData : extracts
-Transformer "1" -- "1..*" RawData : transforms
-Transformer "1" -- "1..*" ProcessedData : produces
-Loader "1" -- "1..*" ProcessedData : loads
+Extractor "1" -- "1..*" RawData : extracts >
+Transformer "1" -- "1..*" RawData : transforms >
+Transformer "1" -- "1..*" ProcessedData : produces >
+Loader "1" -- "1..*" ProcessedData : loads >
 
 @enduml
