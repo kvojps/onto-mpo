@@ -7,43 +7,45 @@ hide <<collective>> circle
 hide members
 hide methods
 
-class ProjectObservatory<<kind>> #FF7F7F {}
-class ProcessManager <<role>> #FFD6DD {}
-class DataHandler <<role>> #FFD6DD {}
-class KnowledgeProducer <<role>> #FFD6DD {}
+class ProjectObservatory<<kind>> #4A90E2 {}
+class ProcessManager <<role>> #7ED321 {}
+class DataHandler <<role>> #7ED321 {}
+class KnowledgeProducer <<role>> #7ED321 {}
 
 ProjectObservatory <|-- ProcessManager
 ProcessManager <|-- DataHandler
 ProcessManager <|-- KnowledgeProducer
 
-class Extractor <<phase>> {}
-class Transformer <<phase>> {}
-class Loader <<phase>> {}
+class Extractor <<phase>> #F5A623 {}
+class Transformer <<phase>> #F5A623 {}
+class Loader <<phase>> #F5A623 {}
 
 DataHandler <|-- Extractor
 DataHandler <|-- Transformer
 DataHandler <|-- Loader
 
-class Data <<kind>> #FF7F7F {}
-class RawData <<phase>> {}
-class ProcessedData <<phase>> {}
-class DataSource <<collective>> {}
-class DataStore <<collective>> {}
+class Data <<kind>> #4A90E2 {}
+class RawData <<phase>> #F5A623 {}
+class ProcessedData <<phase>> #F5A623 {}
 
-RawData --|> Data
-ProcessedData --|> Data
-DataSource --|> RawData
-DataStore --|> ProcessedData
+Data <|-left- RawData
+Data <|-right- ProcessedData
 
-class DataArtifact<<phase>> {}
-class BufferedDataArtifact<<phase>> {}
-class ProcessedDataArtifact<<phase>> {}
+class DataSource <<collective>> #BD93BD {}
+class DataStore <<collective>> #BD93BD {}
 
-DataArtifact -- DataSource
-BufferedDataArtifact-- DataSource
-ProcessedDataArtifact -- DataSource
+DataSource "1" *-- "1..*" RawData : <<MemberOf>>
+DataStore "1" *-- "1..*" ProcessedData : <<MemberOf>>
 
-Extractor "1" -- "1..*" DataArtifact : extracts >
+class DataEntryArtifact<<phase>> #F5A623 {}
+class BufferedDataArtifact<<phase>> #F5A623 {}
+class ProcessedDataArtifact<<phase>> #F5A623 {}
+
+DataSource <|-up- DataEntryArtifact
+DataSource <|-up- BufferedDataArtifact
+DataSource <|-up- ProcessedDataArtifact
+
+Extractor "1" -- "1..*" DataEntryArtifact : extracts >
 Transformer "1" -- "1..*" BufferedDataArtifact : transforms >
 Loader "1" -- "1..*" ProcessedDataArtifact : loads >
 ProcessedDataArtifact "1..*" -- "1" DataStore : stored in >
