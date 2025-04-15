@@ -31,23 +31,12 @@ class ProcessedData <<phase>> #F5A623 {}
 Data <|-left- RawData
 Data <|-right- ProcessedData
 
-class DataSource <<collective>> #BD93BD {}
+Extractor "1" -- "1..*" RawData : extracts >
+Transformer "1" -- "1..*" RawData : transforms >
+Loader "1" -- "1..*" ProcessedData : loads >
+
 class DataStore <<collective>> #BD93BD {}
 
-DataSource "1" *-- "1..*" RawData : <<MemberOf>>
-DataStore "1" *-- "1..*" ProcessedData : <<MemberOf>>
-
-class DataEntryArtifact<<phase>> #F5A623 {}
-class BufferedDataArtifact<<phase>> #F5A623 {}
-class ProcessedDataArtifact<<phase>> #F5A623 {}
-
-DataSource <|-up- DataEntryArtifact
-DataSource <|-up- BufferedDataArtifact
-DataSource <|-up- ProcessedDataArtifact
-
-Extractor "1" -- "1..*" DataEntryArtifact : extracts >
-Transformer "1" -- "1..*" BufferedDataArtifact : transforms >
-Loader "1" -- "1..*" ProcessedDataArtifact : loads >
-ProcessedDataArtifact "1..*" -- "1" DataStore : stored in >
+DataStore "1" *-left- "1..*" ProcessedData : <<MemberOf>>
 
 @enduml
