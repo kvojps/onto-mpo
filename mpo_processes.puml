@@ -1,5 +1,6 @@
 @startuml DataHandler
 skinparam groupInheritance 2
+hide <<category>> circle
 hide <<kind>> circle
 hide <<phase>> circle
 hide <<role>> circle
@@ -20,14 +21,17 @@ DataHandler <|-- Extractor
 DataHandler <|-- Treator
 DataHandler <|-- Loader
 
-class Data <<kind>> #4A90E2 {}
+class Data <<category>> #d72d27 {}
+Data <|-- ProjectData
+
+class ProjectData <<kind>> #4A90E2 {}
 class RawData <<phase>> #F5A623 {}
 class DataArtifact <<collective>> #BD93BD {}
 class ProcessedData <<phase>> #F5A623 {}
 class DataStore <<collective>> #BD93BD {}  
-Data <|-left- RawData
+ProjectData <|-left- RawData
 DataArtifact "1" *-up- "1..*" RawData : <<MemberOf>>
-Data <|-right- ProcessedData
+ProjectData <|-right- ProcessedData
 DataStore "1" *-up- "1..*" ProcessedData : <<MemberOf>>
 Extractor "1" -- "1..*" RawData : extracts >
 Treator "1" -- "1..*" RawData : treats >
@@ -42,7 +46,6 @@ class Combiner <<phase>> #F5A623 {}
 class Transformer <<phase>> #F5A623 {}
 class Information <<kind>> #4A90E2 {}
 class Logger <<phase>> #F5A623 {}
-class Communicator <<phase>> #F5A623 {}
 KnowledgeProducer <|-- InformationProducer
 InformationProducer <|-- Classifier
 Classifier "1" -- "1..*" ProcessedData : classifies >
@@ -53,8 +56,6 @@ Transformer "1" -- "1..*" ProcessedData : transforms >
 Transformer "1" -- "1..*" Information : produces >
 InformationProducer <|-- Logger
 Logger "1" -- "1..*" Information : logs >
-InformationProducer <|-- Communicator
-Communicator "1" -- "1..*" Information : communicates >
 
 class InformationSupplier <<role>> #7ED321 {}
 KnowledgeProducer <|-- InformationSupplier
