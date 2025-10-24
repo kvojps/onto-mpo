@@ -1,0 +1,19 @@
+@startmindmap MPO Structures Classification Tree
+
+top to bottom direction
+* Observatório
+** Infraestrutura de TI
+*** Rede
+**** Hardware
+***** Serviços
+****** Gerenciamento de dados
+******* Coleta
+******* Processamento
+******* Armazenamento
+****** Software
+******* Disseminação
+******* Relacionamento
+** Usuários
+** Projetos
+
+@endmindmap
