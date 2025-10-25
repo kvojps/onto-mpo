@@ -1,19 +1,112 @@
-@startmindmap MPO Structures Classification Tree
+@startuml
 
-top to bottom direction
-* Observatório
-** Infraestrutura de TI
-*** Rede
-**** Hardware
-***** Serviços
-****** Gerenciamento de dados
-******* Coleta
-******* Processamento
-******* Armazenamento
-****** Software
-******* Disseminação
-******* Relacionamento
-** Usuários
-** Projetos
+package "IT Infrastructure" as Infra {
+    class Hardware {
+        + type: str
+        + specification: str
+        + purpose: str
+        - local: str
+        - compute_capacity: str
+        - storage_capacity: str
+    }
+    class Network {
+        + type: str
+        + topology: str
+        + scope: str
+        + protocol: str
+        - local: str
+        - state: str
+        - bandwidth: str
+        - security: str
+    }
+    class DataManagement {
+        + type: str
+        + deploy_model: str
+        + format: str
+        - name: str
+        - version: str
+    }
+    class Software {
+        + deploy_model: str
+        + environment: str
+        + license: str
+        + purpose: str
+        - name: str
+        - version: str
+    }
 
-@endmindmap
+    Software -> DataManagement : uses
+    Software --> Hardware : runs on
+    DataManagement --> Hardware : depends on
+    Hardware --> Network : connects through
+}
+
+class Service
+
+Service --> Infra : operates and maintains
+
+@enduml
+
+
+
+' @startuml MPO Structures Classification Tree
+
+' class Software {}
+' class DataManagement {}
+' class Hardware {}
+' class Network {}
+' class Service {}
+
+' Software -- Hardware
+' Software -- DataManagement
+' DataManagement -- Hardware
+' Hardware -- Network
+' Service - Network
+' Service - Hardware
+' Service - DataManagement
+' Service - Software
+
+' ' class Software {
+' '     + deploy_model: str
+' '     + environment: str
+' '     + license: str
+' '     + purpose: str
+' '     - name: str
+' '     - version: str
+' ' }
+
+
+' ' class Observatory {
+' '     + purpose: String
+' '     + theme: String
+' '     + scope: String
+' '     + name: String
+' ' }
+' ' class TiInfrastrutcture {}
+' ' class UserInteraction {
+' '     + purpose: String
+' '     + action: String
+' ' }
+' ' class Project {}
+
+
+' ' Observatory --> TiInfrastrutcture
+' ' Observatory --> UserInteraction
+' ' Observatory --> Project
+
+' ' * Observatório
+' ' ** Infraestrutura de TI
+' ' *** Rede
+' ' **** Hardware
+' ' ***** Serviços
+' ' ****** Gerenciamento de dados
+' ' ******* Coleta
+' ' ******* Processamento
+' ' ******* Armazenamento
+' ' ****** Software
+' ' ******* Disseminação
+' ' ******* Relacionamento
+' ' ** Usuários
+' ' ** Projetos
+
+' @enduml
