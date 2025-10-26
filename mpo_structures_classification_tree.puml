@@ -1,6 +1,47 @@
-@startuml
+@startuml MPO Structures Classification Tree
+
+package "Content" as Content {
+    class Observatory {
+        + theme: str
+        + purpose: str
+        + scope: str
+        - name: str
+        - owner: str
+    }
+
+    class UserLog {
+        + purpose: str
+        - action: str
+    }
+
+    class Project {
+        + type: str
+        + theme: str
+        + objective: str
+        + scope: str
+        - started_at: datetime
+        - ended_at: datetime
+        - name: str
+        - status: str
+        - description: str
+        - budget: float
+    }
+
+    Observatory -down-> Project: has
+    Observatory -down-> UserLog: includes
+}
 
 package "IT Infrastructure" as Infra {
+    class Service {
+        + type: str
+        + subtype: str
+        - provider: str
+        - local: str
+        - start_period: datetime
+        - end_period: datetime
+        - cost: float
+        - availability: float
+    }
     class Hardware {
         + type: str
         + specification: str
@@ -23,6 +64,7 @@ package "IT Infrastructure" as Infra {
         + type: str
         + deploy_model: str
         + format: str
+        + purpose: str
         - name: str
         - version: str
     }
@@ -35,78 +77,39 @@ package "IT Infrastructure" as Infra {
         - version: str
     }
 
-    Software -> DataManagement : uses
+    Software --> DataManagement : uses
     Software --> Hardware : runs on
-    DataManagement --> Hardware : depends on
+    DataManagement -left-> Hardware : runs on
     Hardware --> Network : connects through
 }
 
-class Service
+package "SoftwareComponents" as SoftComp {
+    class Disseminator {
 
-Service --> Infra : operates and maintains
+    }
+
+    class Relator {
+
+    }
+}
+
+package "DataManagementComponents" as DataComp {
+    class Collector {
+
+    }
+
+    Class Processor {
+
+    }
+
+    class Storer {
+
+    }
+}
+
+Service -up-> Infra : operates and maintains
+Software -> SoftComp : includes
+DataManagement -> DataComp : includes
+Observatory -down-> Infra : depends on
 
 @enduml
-
-
-
-' @startuml MPO Structures Classification Tree
-
-' class Software {}
-' class DataManagement {}
-' class Hardware {}
-' class Network {}
-' class Service {}
-
-' Software -- Hardware
-' Software -- DataManagement
-' DataManagement -- Hardware
-' Hardware -- Network
-' Service - Network
-' Service - Hardware
-' Service - DataManagement
-' Service - Software
-
-' ' class Software {
-' '     + deploy_model: str
-' '     + environment: str
-' '     + license: str
-' '     + purpose: str
-' '     - name: str
-' '     - version: str
-' ' }
-
-
-' ' class Observatory {
-' '     + purpose: String
-' '     + theme: String
-' '     + scope: String
-' '     + name: String
-' ' }
-' ' class TiInfrastrutcture {}
-' ' class UserInteraction {
-' '     + purpose: String
-' '     + action: String
-' ' }
-' ' class Project {}
-
-
-' ' Observatory --> TiInfrastrutcture
-' ' Observatory --> UserInteraction
-' ' Observatory --> Project
-
-' ' * Observatório
-' ' ** Infraestrutura de TI
-' ' *** Rede
-' ' **** Hardware
-' ' ***** Serviços
-' ' ****** Gerenciamento de dados
-' ' ******* Coleta
-' ' ******* Processamento
-' ' ******* Armazenamento
-' ' ****** Software
-' ' ******* Disseminação
-' ' ******* Relacionamento
-' ' ** Usuários
-' ' ** Projetos
-
-' @enduml
