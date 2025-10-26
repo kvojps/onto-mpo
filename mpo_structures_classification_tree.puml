@@ -85,25 +85,51 @@ package "IT Infrastructure" as Infra {
 
 package "SoftwareComponents" as SoftComp {
     class Disseminator {
-
+        + target: str
+        + purpose: str
+        - channel: str
+        - frequency: str
+        - tool: str
+        - format: str
+        - reach: str
     }
 
     class Relator {
-
+        + type: str
+        + purpose: str
+        - channel: str
+        - frequency: str
     }
 }
 
 package "DataManagementComponents" as DataComp {
     class Collector {
-
+        + method: str
+        + source: str
+        + frequency: str
+        - tool: str
+        - size: str
+        - quality: str
     }
 
     Class Processor {
-
+        + method: str
+        + scope: str
+        + automation_level: str
+        + purpose: str
+        - tool: str
+        - size: str
+        - performance: str
+        - result: str
     }
 
     class Storer {
-
+        + type: str
+        + model: str
+        + durability: str
+        + purpose: str
+        - local: str
+        - capacity: str
     }
 }
 
