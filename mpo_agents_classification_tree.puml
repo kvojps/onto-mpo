@@ -1,9 +1,44 @@
-@startmindmap MPO Agents Classification Tree
+@startuml MPO Agents Classification Tree
 
-* Agentes
-** Usuários do Observatório
-** Partes interessadas
-** Sistemas
-** Equipe do Observatório
 
-@endmindmap
+class ObservatoryGroup {
+    + type: str
+    + purpose: str
+    - name: str
+}
+
+class Agent {
+    + type: str
+    - name: str
+    - organization: str
+}
+
+class ObservatoryUser {
+    + role: str
+    + purpose: str
+    - status: str
+}
+
+class Stakeholder {
+    + role: str
+    + influence: str
+    + interest: str
+    - contact: str
+}
+
+class System {
+    + purpose: str
+    + communication_method: str
+    + interoperability: str
+    - stack: str
+    - data_exchanged: str
+    - integration_frequency: str
+    - connection_status: str
+}
+
+ObservatoryGroup -down-> Agent: includes
+Agent <|-- ObservatoryUser
+Agent <|-- Stakeholder
+Agent <|-- System
+
+@enduml
