@@ -1,4 +1,4 @@
-@startuml MPO Formalization
+@startuml MPO Structures Observatory Infra Formalization
 hide members
 skinparam style strictuml
 
