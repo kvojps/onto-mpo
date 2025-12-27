@@ -1,0 +1,24 @@
+@startuml MPO Formalization
+hide members
+skinparam style strictuml
+
+class ProjectObservatory <<SubKind>> #C6E0B4 {}
+class Software <<Kind>> #A8D08D {}
+class Hardware <<Kind>> #A8D08D {}
+class Network <<Kind>> #A8D08D {}
+class Connection <<relator>> #F4B084 {}
+class Service <<Kind>> #A8D08D {}
+class Operation <<relator>> #F4B084 {}
+
+ProjectObservatory --|> Software
+
+Software "1..*" *-left- "1..*" Hardware: <<ComponentOf>>
+Hardware "1" -left- "0..*" Connection : <<mediation>>
+Network "1" -right- "0..*" Connection : <<mediation>>
+
+Operation "0..*" -up- "0..*" Software : <<mediation>>
+Operation "0..*" -up- "0..*" Hardware : <<mediation>>
+Operation "0..*" -up- "0..*" Network : <<mediation>>
+Service "1" -up- "0..*" Operation : <<mediation>>
+
+@enduml
