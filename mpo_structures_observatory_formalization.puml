@@ -3,26 +3,35 @@ hide members
 skinparam style strictuml
 
 class ProjectObservatory <<SubKind>> #C6E0B4 {}
-
 class View <<Role>> #FFE699 {}
 class Relator <<Role>> #FFE699 {}
 class Disseminator <<Role>> #FFE699 {}
 class DataManager <<Role>> #FFE699 {}
+class DataSource <<Kind>> #A8D08D {}
+class Extract <<relator>> #F4B084 {}
 class Collector <<Role>> #FFE699 {}
+class Transform <<relator>> #F4B084 {}
 class Processor <<Role>> #FFE699 {}
+class Load <<relator>> #F4B084 {}
 class Storer <<Role>> #FFE699 {}
 class Project <<Kind>> #A8D08D {}
 class Management <<relator>> #F4B084 {}
 
-ProjectObservatory <|-- DataManager
-ProjectObservatory <|-- View
+ProjectObservatory <|-up- DataManager
+ProjectObservatory <|-up- View
 View "1" -left- "0..*" Management : <<mediation>>
-Relator -up-|> View
-Disseminator -up-|> View
-DataManager "1" - "0..*" Management : <<mediation>>
-Collector -up-|> DataManager
-Processor -up-|> DataManager
-Storer -up-|> DataManager
-Project "1" -up- "0..*" Management : <<mediation>>
+Relator --|> View
+Disseminator --|> View
+DataManager "1" -right- "0..*" Management : <<mediation>>
+DataSource "1" -up- "1..*" Extract : <<mediation>>
+Extract "1..*" -up- "1" Collector : <<mediation>>
+Collector --|> DataManager
+Collector "1" - "1..*" Transform: <<med>>
+Transform "1..*" - "1" Processor: <<med>>
+Processor --|> DataManager
+Processor "1" - "1..*" Load: <<med>>
+Load "1..*" - "1" Storer: <<med>>
+Storer --|> DataManager
+Project "1" -down- "0..*" Management : <<mediation>>
 
 @enduml
