@@ -1,0 +1,18 @@
+@startuml MPO Agents Formalization
+hide members
+skinparam style strictuml
+
+class Agent <<Kind>> #A8D08D {}
+class ObservatoryUser <<Role>> #FFE699 {}
+class StakeHolder <<Role>> #FFE699 {}
+class System <<Role>> #FFE699 {}
+class ObservatoryGroup <<Collective>> #9BC2E6 {}
+
+ObservatoryUser -up-|> Agent
+StakeHolder -up-|> Agent
+System -up-|> Agent
+ObservatoryGroup "1" -up-* "0..*" ObservatoryUser: <<MemberOf>>
+ObservatoryGroup "1" -up-* "0..*" StakeHolder: <<MemberOf>>
+ObservatoryGroup "1" -up-* "0..*" System: <<MemberOf>>
+
+@enduml
