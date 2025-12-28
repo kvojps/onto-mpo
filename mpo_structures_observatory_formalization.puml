@@ -7,6 +7,7 @@ class View <<Role>> #FFE699 {}
 class Relator <<Role>> #FFE699 {}
 class Disseminator <<Role>> #FFE699 {}
 class DataManager <<Role>> #FFE699 {}
+class CrudManager <<Role>> #FFE699 {}
 class DataSource <<Kind>> #A8D08D {}
 class Extract <<relator>> #F4B084 {}
 class Collector <<Role>> #FFE699 {}
@@ -19,19 +20,20 @@ class Management <<relator>> #F4B084 {}
 
 ProjectObservatory <|-up- DataManager
 ProjectObservatory <|-up- View
-View "1" -left- "0..*" Management : <<mediation>>
+View "1" -left- "0..*" Management : <<med>>
 Relator --|> View
 Disseminator --|> View
-DataManager "1" -right- "0..*" Management : <<mediation>>
-DataSource "1" -up- "1..*" Extract : <<mediation>>
-Extract "1..*" -up- "1" Collector : <<mediation>>
-Collector --|> DataManager
-Collector "1" - "1..*" Transform: <<med>>
-Transform "1..*" - "1" Processor: <<med>>
-Processor --|> DataManager
-Processor "1" - "1..*" Load: <<med>>
-Load "1..*" - "1" Storer: <<med>>
-Storer --|> DataManager
-Project "1" -down- "0..*" Management : <<mediation>>
+DataManager <|-up- CrudManager
+DataManager "1" -right- "0..*" Management : <<med>>
+DataSource "1" -up- "1..*" Extract : <<med>>
+Extract "1..*" -up- "1" Collector : <<med>>
+Collector -up-|> DataManager
+Collector "1" -down- "1..*" Transform: <<med>>
+Transform "1..*" -up- "1" Processor: <<med>>
+Processor -up-|> DataManager
+Processor "1" -down- "1..*" Load: <<med>>
+Load "1..*" -up- "1" Storer: <<med>>
+Storer -up-|> DataManager
+Project "1" -down- "0..*" Management : <<med>>
 
 @enduml
