@@ -2,7 +2,6 @@
 hide members
 skinparam style strictuml
 
-class ProjectObservatory <<SubKind>> #C6E0B4 {}
 class Software <<Kind>> #A8D08D {}
 class Hardware <<Kind>> #A8D08D {}
 class Network <<Kind>> #A8D08D {}
@@ -10,15 +9,12 @@ class Connection <<relator>> #F4B084 {}
 class Service <<Kind>> #A8D08D {}
 class Operation <<relator>> #F4B084 {}
 
-ProjectObservatory --|> Software
-
-Software "1..*" *-left- "1..*" Hardware: <<ComponentOf>>
-Hardware "1" -left- "0..*" Connection : <<mediation>>
-Network "1" -right- "0..*" Connection : <<mediation>>
-
-Operation "0..*" -up- "0..*" Software : <<mediation>>
-Operation "0..*" -up- "0..*" Hardware : <<mediation>>
-Operation "0..*" -up- "0..*" Network : <<mediation>>
-Service "1" -up- "0..*" Operation : <<mediation>>
+Software "1..*" *-down- "1..*" Hardware: <<CompOf>>
+Hardware "1" -down- "0..*" Connection : <<med>>
+Network "1" -left- "0..*" Connection : <<med>>
+Operation "0..*" -left- "0..*" Software : <<med>>
+Operation "0..*" -left- "0..*" Hardware : <<med>>
+Operation "0..*" -down- "0..*" Network : <<med>>
+Service "1" -down- "0..*" Operation : <<med>>
 
 @enduml

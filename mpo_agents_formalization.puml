@@ -8,11 +8,11 @@ class StakeHolder <<Role>> #FFE699 {}
 class System <<Role>> #FFE699 {}
 class ObservatoryGroup <<Collective>> #9BC2E6 {}
 
-ObservatoryUser -up-|> Agent
-StakeHolder -up-|> Agent
-System -up-|> Agent
-ObservatoryGroup "1" -up-* "0..*" ObservatoryUser: <<MemberOf>>
-ObservatoryGroup "1" -up-* "0..*" StakeHolder: <<MemberOf>>
-ObservatoryGroup "1" -up-* "0..*" System: <<MemberOf>>
+ObservatoryUser -down-|> Agent
+StakeHolder -down-|> Agent
+System -down-|> Agent
+ObservatoryGroup "1" -down-* "0..*" ObservatoryUser: <<MemberOf>>
+ObservatoryGroup "1" -down-* "0..*" StakeHolder: <<MemberOf>>
+ObservatoryGroup "1" -down- "0..*" System: <<MemberOf>>
 
 @enduml

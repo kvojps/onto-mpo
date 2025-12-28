@@ -1,0 +1,86 @@
+@startuml MPO Formalization
+hide members
+skinparam style strictuml
+
+' MPO Structures Observatory Formalization
+class ProjectObservatory <<SubKind>> #C6E0B4 {}
+class View <<Role>> #FFE699 {}
+class Relator <<Role>> #FFE699 {}
+class Disseminator <<Role>> #FFE699 {}
+class DataManager <<Role>> #FFE699 {}
+class CrudManager <<Role>> #FFE699 {}
+class DataSource <<Kind>> #A8D08D {}
+class Extract <<relator>> #F4B084 {}
+class Collector <<Role>> #FFE699 {}
+class Transform <<relator>> #F4B084 {}
+class Processor <<Role>> #FFE699 {}
+class Load <<relator>> #F4B084 {}
+class Storer <<Role>> #FFE699 {}
+class Project <<Kind>> #A8D08D {}
+class Management <<relator>> #F4B084 {}
+
+ProjectObservatory <|-up- DataManager
+ProjectObservatory <|-up- View
+View "1" -left- "0..*" Management : <<med>>
+Relator --|> View
+Disseminator --|> View
+DataManager <|-up- CrudManager
+DataManager "1" -right- "0..*" Management : <<med>>
+DataSource "1" -up- "1..*" Extract : <<med>>
+Extract "1..*" -up- "1" Collector : <<med>>
+Collector -up-|> DataManager
+Collector "1" -down- "1..*" Transform: <<med>>
+Transform "1..*" -up- "1" Processor: <<med>>
+Processor -up-|> DataManager
+Processor "1" -down- "1..*" Load: <<med>>
+Load "1..*" -up- "1" Storer: <<med>>
+Storer -up-|> DataManager
+Project "1" -down- "0..*" Management : <<med>>
+
+' MPO Structures Observatory Infra Formalization
+class Software <<Kind>> #A8D08D {}
+class Hardware <<Kind>> #A8D08D {}
+class Network <<Kind>> #A8D08D {}
+class Connection <<relator>> #F4B084 {}
+class Service <<Kind>> #A8D08D {}
+class Operation <<relator>> #F4B084 {}
+
+ProjectObservatory --|> Software
+Software "1..*" *-down- "1..*" Hardware: <<CompOf>>
+Hardware "1" -down- "0..*" Connection : <<med>>
+Network "1" -left- "0..*" Connection : <<med>>
+Operation "0..*" -left- "0..*" Software : <<med>>
+Operation "0..*" -left- "0..*" Hardware : <<med>>
+Operation "0..*" -down- "0..*" Network : <<med>>
+Service "1" -down- "0..*" Operation : <<med>>
+
+' MPO Agents Formalization
+class Agent <<Kind>> #A8D08D {}
+class ObservatoryUser <<Role>> #FFE699 {}
+class StakeHolder <<Role>> #FFE699 {}
+class System <<Role>> #FFE699 {}
+class ObservatoryGroup <<Collective>> #9BC2E6 {}
+
+ObservatoryUser -down-|> Agent
+StakeHolder -down-|> Agent
+System -down-|> Agent
+ObservatoryGroup "1" -down-* "0..*" ObservatoryUser: <<MemberOf>>
+ObservatoryGroup "1" -down-* "0..*" StakeHolder: <<MemberOf>>
+ObservatoryGroup "1" -down- "0..*" System: <<MemberOf>>
+
+' Interactions Formalization
+class CrudOperation <<relator>> #F4B084 {}
+class Log <<relator>> #F4B084 {}
+class SocialInteraction as "Social\nInteraction" <<relator>> #F4B084 {}
+class Observation <<relator>> #F4B084 {}
+
+Agent "1" -down- "0..*" CrudOperation: <<med>>
+CrudOperation "0..*" -down- "1" CrudManager: <<med>>
+Agent "1" -down- "0..*" Log: <<med>>
+Log "0..*" -down- "1" Relator: <<med>>
+Agent "1" -down- "0..*" SocialInteraction: <<med>>
+SocialInteraction "0..*" -down- "1" Relator: <<med>>
+Agent "1" -down- "0..*" Observation: <<med>>
+Observation "0..*" -down- "1" Disseminator: <<med>>
+
+@enduml
