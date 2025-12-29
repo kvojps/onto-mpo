@@ -75,6 +75,7 @@ class CrudOperation <<relator>> #F4B084 {}
 class Log <<relator>> #F4B084 {}
 class SocialInteraction as "Social\nInteraction" <<relator>> #F4B084 {}
 class Observation <<relator>> #F4B084 {}
+class Knowledge <<Kind>> #A8D08D {}
 
 Agent "1" -down- "0..*" CrudOperation: <<med>>
 CrudOperation "0..*" -down- "1" CrudView: <<med>>
@@ -84,5 +85,6 @@ Agent "1" -down- "0..*" SocialInteraction: <<med>>
 SocialInteraction "0..*" -down- "1" Relator: <<med>>
 Agent "1" -down- "0..*" Observation: <<med>>
 Observation "0..*" -down- "1" Disseminator: <<med>>
+Observation "1..*" -up- "1..*" Knowledge: <<med>>
 
 @enduml
