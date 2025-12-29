@@ -21,11 +21,95 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#connected_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#connected_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:comment>&lt;&lt;mediation&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_hardware -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_hardware">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_hardware_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_hardware_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_scope -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_scope">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_topology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_topology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_network_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_observatory_member -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_observatory_member">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_software_model -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_software_model">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -33,9 +117,11 @@
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_influence_degree -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_influence_degree">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolder"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInfluenceDegree"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -43,8 +129,11 @@
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_interest_level -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_interest_level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolder"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInterestLevel"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -52,9 +141,11 @@
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_type -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_stake_holder_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolder"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderType"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -62,8 +153,11 @@
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_system_interoperability_level -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_system_interoperability_level">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#System"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemInteroperabilityLevel"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -71,9 +165,25 @@
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_system_type -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_system_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#System"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType"/>
+        <rdfs:comment>&lt;&lt;ComponentOf&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mantains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mantains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+        <rdfs:comment>&lt;&lt;mediation&gt;&gt;</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -208,6 +318,176 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_capacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_local -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_local">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_purpose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_specification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#hw_specification">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_band_width_gb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_band_width_gb">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_local -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_local">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_protocol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_protocol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#network_status">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_availability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_availability">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_cost">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_local -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_local">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_period -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_period">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_provider -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_provider">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_subtype -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_subtype">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#service_type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#sw_environment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#sw_environment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#sw_purpose -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#sw_purpose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -227,9 +507,71 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#connected_to"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network">
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_observatory_member"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>&lt;&lt;Collective&gt;&gt;</rdfs:comment>
     </owl:Class>
     
@@ -240,6 +582,58 @@
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryUser">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
         <rdfs:comment>&lt;&lt;Role&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mantains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mantains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mantains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_hardware"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Hardware"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
@@ -255,19 +649,25 @@
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInfluenceDegree -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInfluenceDegree"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInfluenceDegree">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInterestLevel -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInterestLevel"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderInterestLevel">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderType -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderType">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -282,13 +682,17 @@
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemInteroperabilityLevel -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemInteroperabilityLevel"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemInteroperabilityLevel">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType">
+        <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -319,10 +723,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#BUS_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#BUS_NETWORK"/>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#CORPORATE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#CORPORATE">
         <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#CPU_HW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#CPU_HW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
     </owl:NamedIndividual>
     
 
@@ -339,6 +757,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#GOVERNMENT">
         <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#GPU_HW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#GPU_HW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
     </owl:NamedIndividual>
     
 
@@ -360,10 +786,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HYBRID_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HYBRID_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#IAAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#IAAS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#INTERN -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#INTERN">
         <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolderType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#LAN_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#LAN_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope"/>
     </owl:NamedIndividual>
     
 
@@ -385,6 +836,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MAN_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MAN_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MEDIUM -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MEDIUM">
@@ -394,10 +853,98 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MESH_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#MESH_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NETWORK_HW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NETWORK_HW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PAAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PAAS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PRIVATE_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PRIVATE_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PUBLIC -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PUBLIC">
         <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SystemType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PUBLIC_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#PUBLIC_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#RING_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#RING_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SAAS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SAAS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SoftwareModel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SERVER_HW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SERVER_HW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#STAR_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#STAR_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkTopology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#STORAGE_HW -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#STORAGE_HW">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#HardwareType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#WAN_NETWORK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#WAN_NETWORK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkScope"/>
     </owl:NamedIndividual>
     
 
