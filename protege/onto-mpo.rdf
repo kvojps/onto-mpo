@@ -221,13 +221,17 @@
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent">
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryGroup">
+        <rdfs:comment>&lt;&lt;Collective&gt;&gt;</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -235,6 +239,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryUser">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+        <rdfs:comment>&lt;&lt;Role&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
@@ -243,6 +248,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolder">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+        <rdfs:comment>&lt;&lt;Role&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
@@ -269,6 +275,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#System">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+        <rdfs:comment>&lt;&lt;Role&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
