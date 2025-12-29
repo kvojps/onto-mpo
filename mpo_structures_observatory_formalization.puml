@@ -4,10 +4,11 @@ skinparam style strictuml
 
 class ProjectObservatory <<SubKind>> #C6E0B4 {}
 class View <<Role>> #FFE699 {}
+class CrudView <<Role>> #FFE699 {}
 class Relator <<Role>> #FFE699 {}
 class Disseminator <<Role>> #FFE699 {}
 class DataManager <<Role>> #FFE699 {}
-class CrudManager <<Role>> #FFE699 {}
+class CrudRepository <<Role>> #FFE699 {}
 class DataSource <<Kind>> #A8D08D {}
 class Extract <<relator>> #F4B084 {}
 class Collector <<Role>> #FFE699 {}
@@ -21,9 +22,10 @@ class Management <<relator>> #F4B084 {}
 ProjectObservatory <|-up- DataManager
 ProjectObservatory <|-up- View
 View "1" -left- "0..*" Management : <<med>>
+CrudView --|> View
 Relator --|> View
 Disseminator --|> View
-DataManager <|-up- CrudManager
+DataManager <|-up- CrudRepository
 DataManager "1" -right- "0..*" Management : <<med>>
 DataSource "1" -up- "1..*" Extract : <<med>>
 Extract "1..*" -up- "1" Collector : <<med>>
