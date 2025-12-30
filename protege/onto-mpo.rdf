@@ -44,6 +44,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#generates_log -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#generates_log">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Transaction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Log"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#handle_projects_data -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#handle_projects_data">
@@ -207,6 +218,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_participant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_participant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SocialInteraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ObservatoryUser"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StakeHolder"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_project_management_interface -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_project_management_interface">
@@ -302,6 +325,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_storage_finality -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_storage_finality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Storage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#StorageFinality"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_storage_model -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#has_storage_model">
@@ -348,6 +381,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#is_managed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#is_managed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ProjectManagement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#manages -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#manages">
@@ -369,6 +413,60 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Software"/>
         <rdfs:comment>&lt;&lt;mediation&gt;&gt;</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mediated_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#mediated_by">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SocialInteraction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Transaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#observation_is_available_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#observation_is_available_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#View"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#observed_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#observed_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#produces_knowledge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#produces_knowledge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Observation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Knowledge"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#project_management_is_available_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#project_management_is_available_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ProjectManagement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Transaction"/>
     </owl:ObjectProperty>
     
 
@@ -1118,6 +1216,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Knowledge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Knowledge">
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Log -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Log">
+        <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Network">
@@ -1146,6 +1260,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#NetworkType">
         <rdfs:comment>&lt;&lt;Mixin&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Observation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Observation">
+        <rdfs:comment>&lt;&lt;relator&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
@@ -1187,6 +1309,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#Project">
         <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ProjectManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#ProjectManagement">
+        <rdfs:comment>&lt;&lt;relator&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
@@ -1269,6 +1399,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>&lt;&lt;Kind&gt;&gt;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SocialInteraction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josefjunior/ontologies/2025/11/onto-mpo#SocialInteraction">
+        <rdfs:comment>&lt;&lt;relator&gt;&gt;</rdfs:comment>
     </owl:Class>
     
 
